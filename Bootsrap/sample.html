@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="#">Nike Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Buying</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Wishlist</a></li>
+        </ul>
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Model" aria-label="Search">
+          <button class="btn btn-warning" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">About</a></li>
+              <li><a class="dropdown-item" href="#">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="shoeCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#shoeCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#shoeCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#shoeCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./Assets/scrol1.jpg" alt="Nike Air Force 1" style="width:100%; height:500px; object-fit:cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Nike Air Force 1</h5>
+          <p>Classic style meets all-day comfort.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="./Assets/scrol5.jpg" alt="Nike Air Max 90" style="width:100%; height:500px; object-fit:cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Nike Air Max 90</h5>
+          <p>Iconic design with premium cushioning.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="./Assets/scrol3.jpg" alt="Nike Air Jordan 1" style="width:100%; height:500px; object-fit:cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Nike Air Jordan 1</h5>
+          <p>The original basketball legend.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#shoeCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#shoeCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div><br>
+  <div>
+    <img src="./Assets/bannar1.jpg" class="img-fluid w-100" style="height: 140x; object-fit:cover;">
+  </div>
+  <div class="container mt-5">
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="./Assets/shoe1.jpeg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nike Air Force 1</h5>
+            <p class="card-text">Classic streetwear icon with premium leather and all-day comfort.</p>
+            <p class="fw-bold text-success">₹6,999</p>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#shoe">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="./Assets/shoe2.jpeg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nike Air Max 90</h5>
+            <p class="card-text">Retro running style with visible Air cushioning for a smooth ride.</p>
+            <p class="fw-bold text-success">₹8,499</p>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#shoe">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="./Assets/shoe3.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nike Air Jordan 1</h5>
+            <p class="card-text">Legendary basketball shoe that started a sneaker revolution.</p>
+            <p class="fw-bold text-success">₹12,999</p>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#shoe">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="./Assets/shoe4.jpeg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nike Dunk Low</h5>
+            <p class="card-text">Skate-inspired design with bold colors and durable build.</p>
+            <p class="fw-bold text-success">₹7,499</p>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#shoe">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="./Assets/shoe5.jpeg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nike Blazer Mid ’77</h5>
+            <p class="card-text">Vintage basketball style with a sleek mid-top look.</p>
+            <p class="fw-bold text-success">₹6,499</p>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#shoe">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="./Assets/shoe6.jpeg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nike Air Zoom Pegasus 40</h5>
+            <p class="card-text">Lightweight runner with responsive Zoom Air cushioning.</p>
+            <p class="fw-bold text-success">₹9,299</p>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#shoe">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="./Assets/shoe7.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nike Infinity Run Flyknit 3</h5>
+            <p class="card-text">Soft, springy, and stable for long-distance runs.</p>
+            <p class="fw-bold text-success">₹10,499</p>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#shoe">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="./Assets/shoe8.jpeg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nike LeBron 21</h5>
+            <p class="card-text">High-performance basketball shoe built for power and agility.</p>
+            <p class="fw-bold text-success">₹14,999</p>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#shoe">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="shoe" tabindex="-1" aria-labelledby="shoe" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel1">Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Ready for order.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          About
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Nike, Inc., founded in 1964 as Blue Ribbon Sports by Bill Bowerman and Phil Knight, is a global leader in
+          sportswear and footwear, headquartered in Beaverton, Oregon, USA. Renamed Nike in 1971, the brand takes its
+          name from the Greek goddess of victory and features the iconic “Swoosh” logo, symbolizing speed and movement.
+          Famous for its “Just Do It” slogan launched in 1988, Nike is known for innovations like Air cushioning,
+          Flyknit technology, and self-lacing shoes. With partnerships with top athletes such as Michael Jordan,
+          Cristiano Ronaldo, and Serena Williams, Nike sells its products in over 190 countries and generates annual
+          revenues exceeding $50 billion, all while promoting sustainability through its “Move to Zero” initiative.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Brands
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Nike, Inc. owns three main brands: Nike, its core sportswear and footwear line; Jordan Brand, a premium
+          basketball and lifestyle label inspired by Michael Jordan; and Converse, famous for its classic Chuck Taylor
+          sneakers. In the past, Nike also owned brands like Cole Haan, Umbro, Hurley, and Bauer Hockey, but sold them
+          to focus on its flagship labels.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Networth
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Nike, Inc. operates in over 190 countries with thousands of retail stores, outlets, and partner locations
+          worldwide, supported by major branches in North America, Europe, Asia, and Latin America. The company
+          generates an annual revenue of over $50 billion USD, investing billions in marketing, athlete sponsorships,
+          and product innovation to maintain its position as a global sportswear leader.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-5">
+    <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#orderModal">
+      Customer details
+    </button>
+  </div>
+  <div class="modal fade" id="orderModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Order Nike Shoes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Select Shoe Model</label>
+              <select class="form-select" required>
+                <option selected disabled>Choose your model</option>
+                <option>Nike Air Force 1</option>
+                <option>Nike Air Max</option>
+                <option>Nike React</option>
+                <option>Nike Zoom Pegasus</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Shoe Size (US)</label>
+              <input type="number" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Shipping Address</label>
+              <textarea class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="newsletter">
+              <label class="form-check-label" for="newsletter">
+                Subscribe to Nike newsletter
+              </label>
+            </div>
+            <button type="button" class="btn btn-dark w-100 fw-bold" data-bs-target="#detailsModal"
+              data-bs-toggle="modal">
+              Place Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div><br>
+  <footer class="bg-dark text-light pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="text-warning fw-bold">Nike Store</h5>
+          <p>Explore the latest Nike shoes with unbeatable comfort and style. Designed for athletes and trendsetters.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-warning">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Products</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Wishlist</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-warning">Contact</h5>
+          <p class="mb-1">📍 Chennai, Tamil Nadu, India</p>
+          <p class="mb-1">📞 +91 98765 43210</p>
+          <p>📧 info@nikestore.com</p>
+        </div>
+      </div>
+      <div class="text-center py-3 border-top border-secondary mt-3">
+        <small>© 2025 Nike Store. All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
