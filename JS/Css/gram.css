@@ -1,0 +1,44 @@
+
+        .fullbody {
+            background-color: rgba(29, 138, 255, 0.649);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100dvh;
+        }
+
+        .container {
+            border-radius: 10px;
+            width: 450px;
+            height: 250px;
+            text-align: center;
+            background-color: aliceblue;
+
+        }
+
+        h1 {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .input>label {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        .input>input {
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 4px;
+        }
+        .Convert{
+            margin-left: 50px;
+            background-color: red;
+        }
+        .clear{
+            margin-left: 10px;
+            background-color: red   ;
+        }

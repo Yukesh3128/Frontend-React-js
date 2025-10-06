@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Interest Calculator</title>
+  <style>
+    body {
+      background-image: url(./Assets/bg.jpg_large);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #ceecabd0;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #444;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .calc-btn {
+      background: #4CAF50;
+    }
+    .calc-btn:hover {
+      background: #45a049;
+    }
+    .clear-btn {
+      background: #f44336;
+    }
+    .clear-btn:hover {
+      background: #d32f2f;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #f0f9f0;
+      border: 1px solid #cce5cc;
+    }
+    .result p {
+      margin: 6px 0;
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Simple Interest Calculator</h2>
+    <label for="principal">Principal Amount (₹)</label>
+    <input type="number" id="principal" placeholder="Enter amount">
+
+    <label for="rate">Rate of Interest (%)</label>
+    <input type="number" id="rate" placeholder="Enter rate">
+
+    <label for="time">Time (in years)</label>
+    <input type="number" id="time" placeholder="Enter years">
+
+    <div class="buttons">
+      <button class="calc-btn" onclick="calculateSI()">Calculate</button>
+      <button class="clear-btn" onclick="clearFields()">Clear</button>
+    </div>
+
+    <div class="result" id="result" style="display:none;">
+      <p id="si"></p>
+      <p id="total"></p>
+    </div>
+  </div>
+
+  <script>
+    function calculateSI() {
+      let p = parseFloat(document.getElementById("principal").value);
+      let r = parseFloat(document.getElementById("rate").value);
+      let t = parseFloat(document.getElementById("time").value);
+
+      if (isNaN(p) || isNaN(r) || isNaN(t)) {
+        alert("Please enter all values");
+        return;
+      }
+
+      let si = (p * r * t) / 100;
+      let total = p + si;
+
+      document.getElementById("si").innerText = "Simple Interest: ₹" + si.toFixed(2);
+      document.getElementById("total").innerText = "Total Amount: ₹" + total.toFixed(2);
+      document.getElementById("result").style.display = "block";
+    }
+
+    function clearFields() {
+      document.getElementById("principal").value = "";
+      document.getElementById("rate").value = "";
+      document.getElementById("time").value = "";
+      document.getElementById("result").style.display = "none";
+    }
+  </script>
+</body>
+</html>

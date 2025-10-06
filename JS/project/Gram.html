@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gram to pavan converter</title>
+    <link rel="stylesheet" href="../Css/gram.css">
+</head>
+
+<body>
+    <div class="fullbody">
+        <div class="container">
+            <h1>Gram to Pavan Converter</h1>
+            <div class="input">
+                <label>Enter the gram:</label>
+                <input type="number" id="gram" placeholder="Enter the gram" required>
+            </div>
+            <button class="Convert" onclick="GramToPavan()">Convert</button>
+            <button class="clear" onclick="Clear()">Clear</button>
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+<script>
+    function GramToPavan() {
+        let gram = document.getElementById("gram").value;
+
+        if (gram === "" || gram <= 0) {
+            document.getElementById("result").innerHTML = "⚠️ Please enter the value";
+        } else {
+            let pavan = gram / 8;
+            document.getElementById("result").innerHTML = gram + " grams = " + pavan + " pavan";
+        }
+    }
+    function Clear() {
+            document.getElementById("gram").value = "";
+            document.getElementById("result").innerHTML = "";
+    }
+</script>
+
+</html>
