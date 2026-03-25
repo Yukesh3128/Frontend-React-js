@@ -1,0 +1,10 @@
+import React from "react";
+function ProductExample(props) {
+  return (
+    <div>
+      <h3>{props.name}</h3>
+      <p>Price: ₹{props.price}</p>
+    </div>
+  );
+}
+export default ProductExample
